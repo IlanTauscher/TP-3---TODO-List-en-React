@@ -4,7 +4,7 @@ import MensajeRapido from './MensajeRapido'
 
 export default function TareaRapida() {
   return (
-    <div class="fastest-container">
+    <div className="fastest-container">
         <BotonRapido/>
         <MensajeRapido/>
     </div>

@@ -1,9 +1,13 @@
-import React from 'react'
+// import React from 'react'
 
-export default function EscribirTarea() {
-  return (
-    <>
-      <input type="text" id="myInput" placeholder="Escribe tu tarea..."/>
-    </>
-  )
-}
+// export default function EscribirTarea({setNuevaTarea}) {
+  
+//   const inputCambiado = () => {
+//     setNuevaTarea(document.querySelector("myInput").value);
+//   };
+//   return (
+//     <>
+      
+//     </>
+//   )
+// }
