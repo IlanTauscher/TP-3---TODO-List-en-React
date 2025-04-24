@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <Header todo={todo} setTodo={setTodo}/>
-      <Tarea/>
+      <Tarea todo={todo} setTodo={setTodo}/>
       <TareaRapida/>
     </>
   )
