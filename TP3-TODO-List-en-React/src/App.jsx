@@ -1,15 +1,16 @@
 import { useState } from 'react'
 import './App.css'
 import Header from './Header.jsx'
-import Tarea from './Tarea.jsx'
+import Lista from './Lista.jsx'
 import TareaRapida from './TareaRapida.jsx'
 
 function App() {
   const [todo, setTodo] = useState([]);
+  const [i, setI] = useState(0);
   return (
     <>
-      <Header todo={todo} setTodo={setTodo}/>
-      <Tarea todo={todo} setTodo={setTodo}/>
+      <Header setTodo={setTodo} setI={setI} i={i} todo={todo}/>
+      <Lista todo={todo} setTodo={setTodo}/>
       <TareaRapida/>
     </>
   )
