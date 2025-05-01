@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-export default function MensajeRapido() {
+export default function MensajeRapido({msg}) {
+  
   return (
     <div>
-      <span id="fastestTask"></span>
+      <span id="fastestTask" className={msg.type}>{msg.text}</span>
     </div>
   )
 }

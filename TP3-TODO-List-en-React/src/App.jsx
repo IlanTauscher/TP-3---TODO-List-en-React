@@ -2,7 +2,6 @@ import { useState } from 'react'
 import './App.css'
 import Header from './Header.jsx'
 import Lista from './Lista.jsx'
-import TareaRapida from './TareaRapida.jsx'
 
 function App() {
   const [todo, setTodo] = useState([]);
@@ -11,7 +10,6 @@ function App() {
     <>
       <Header setTodo={setTodo} setI={setI} i={i} todo={todo}/>
       <Lista todo={todo} setTodo={setTodo}/>
-      <TareaRapida/>
     </>
   )
 }

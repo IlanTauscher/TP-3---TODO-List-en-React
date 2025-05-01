@@ -1,6 +1,7 @@
 import React from "react";
+import TareaRapida from './TareaRapida.jsx'
 
-export default function Lista({ todo, setTodo }) {
+export default function Lista({ todo, setTodo, setMsg }) {
   const toggleTarea = (id) => {
     const nuevasTareas = todo.map((task) => {
       if (task.id === id) {
@@ -20,17 +21,14 @@ export default function Lista({ todo, setTodo }) {
   return (
     <ul>
       {todo.map((task) => (
-        <li key={task.id} className={task.terminado ? "checked" : ""}>
-          <input
-            type="checkbox"
-            className="task_input"
-            checked={task.terminado}
-            onChange={() => toggleTarea(task.id)}
-          />
-          <h3 style={{ margin: 0 }}>{task.contenido}</h3>
+        <li key={task.id} className={task.terminado ? "checked" : "elemento"}>
+          <input type="checkbox" className="task_input" checked={task.terminado} onChange={() => toggleTarea(task.id)}/>
+          <h3 style={{ margin: 0 }} className={task.terminado ? "tachar" : ""}>{task.contenido}</h3>
           <span>Creada: {task.fechaCreacion}</span>
         </li>
       ))}
+    
+    <TareaRapida todo={todo} setTodo={setTodo}/>
     </ul>
   );
 }
